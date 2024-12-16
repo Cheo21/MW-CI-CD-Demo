@@ -16,7 +16,7 @@ jobs:
       - name: Display Go version
         run: go version
       - name: Install dependencies
-        run: gt get .
+        run: go get .
       - name: Test with Go
         run: go test -json > TestResults-{{ matrix.go-version }}.json
       - name: Upload Go test results
